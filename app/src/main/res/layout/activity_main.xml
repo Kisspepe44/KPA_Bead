@@ -8,12 +8,18 @@
     android:orientation="vertical"
     android:gravity="center_horizontal">
 
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dont"
+        android:text="Döntetlen: 0"
+        android:textSize="30dp"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         >
+
         <ImageView
             android:id="@+id/sajat"
             android:layout_width="100dp"
