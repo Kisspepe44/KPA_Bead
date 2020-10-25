@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -14,6 +15,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
     Button btn_ko,btn_papir,btn_ollo;
     ImageView sajat,elenfel;
+    int sajatpont,ellenfelpont,dontetlen =0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +87,41 @@ public class MainActivity extends AppCompatActivity {
                  elenfel.setImageResource(R.drawable.scissors);
              }
 
+             if (sajat == ellenfel)
+             {
+                 dontetlen++;
+                 Toast.makeText(this, "Döntetlen.", Toast.LENGTH_SHORT).show();
+             }
+             else if (sajat == "Kő" && ellenfel == "Olló")
+             {
+                 sajatpont++;
+                 Toast.makeText(this, "Nyertél.", Toast.LENGTH_SHORT).show();
+             }
+             else if (sajat == "Kő" && ellenfel == "Papír")
+             {
+                 ellenfelpont++;
+                 Toast.makeText(this, "Vesztettél.", Toast.LENGTH_SHORT).show();
+             }
+             else if (sajat == "Olló" && ellenfel == "Kő")
+             {
+                 ellenfelpont++;
+                 Toast.makeText(this, "Vesztettél.", Toast.LENGTH_SHORT).show();
+             }
+             else if (sajat == "Olló" && ellenfel == "Papír")
+             {
+                 sajatpont++;
+                 Toast.makeText(this, "Nyertél.", Toast.LENGTH_SHORT).show();
+             }
+             else if (sajat == "Papír" && ellenfel == "Kő")
+             {
+                 sajatpont++;
+                 Toast.makeText(this, "Nyertél.", Toast.LENGTH_SHORT).show();
+             }
+             else if (sajat == "Papír" && ellenfel == "Olló")
+             {
+                 ellenfelpont++;
+                 Toast.makeText(this, "Vesztettél.", Toast.LENGTH_SHORT).show();
+             }
 
 
          }
