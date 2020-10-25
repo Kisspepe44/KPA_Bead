@@ -73,25 +73,28 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
             android:id="@+id/btn_ko"
-            android:text="Kő"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/rock"
 
 
             />
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/paper"
             android:id="@+id/btn_papir"
-            android:text="Papír"
+
 
             />
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/scissors"
             android:id="@+id/btn_ollo"
-            android:text="Olló"
+            
 
             />
     </LinearLayout>
