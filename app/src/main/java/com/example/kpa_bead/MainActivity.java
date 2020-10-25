@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn_ko,btn_papir,btn_ollo;
     ImageView sajat,elenfel;
     int sajatpont,ellenfelpont,dontetlen =0;
+    TextView kiir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +29,13 @@ public class MainActivity extends AppCompatActivity {
 
         sajat = (ImageView) findViewById(R.id.sajat);
         elenfel = (ImageView) findViewById(R.id.elenfel);
-
+        kiir = (TextView)findViewById(R.id.kiir);
         btn_ko.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sajat.setImageResource(R.drawable.rock);
                 kor("Kő");
+                kiir.setText("Eredmény: Ember:"+Integer.toString(sajatpont)+ " Computer:"+Integer.toString(ellenfelpont));
             }
         });
         btn_papir.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 sajat.setImageResource(R.drawable.paper);
                 kor("Papír");
+                kiir.setText("Eredmény: Ember:"+Integer.toString(sajatpont)+ " Computer:"+Integer.toString(ellenfelpont));
             }
         });
         btn_ollo.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 sajat.setImageResource(R.drawable.scissors);
                 kor("Olló");
+                kiir.setText("Eredmény: Ember:"+Integer.toString(sajatpont)+ " Computer:"+Integer.toString(ellenfelpont));
             }
         });
 
